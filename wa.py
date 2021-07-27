@@ -58,14 +58,14 @@ window.close()
 
 if event == 'Cancel' or event == None:
     quit()
-
-print('Value 0', values[0])
-print('Value 1', values[1])
-print('Value 2', values[2])
-print('Value 3', values[3])
-print('Value 4', values[4])
-print('Value 5', values[5])
-print('Value6', values[6])
+#
+# print('Value 0', values[0])
+# print('Value 1', values[1])
+# print('Value 2', values[2])
+# print('Value 3', values[3])
+# print('Value 4', values[4])
+# print('Value 5', values[5])
+# print('Value6', values[6])
 
 # ------------------------------------------------------------------------------
 # Getting ID / Xpath
@@ -89,7 +89,7 @@ address_xpath = '//*[@id="' + form_tags[3]['id'] + '"]'
 
 print("\n")
 path = str(values[6])
-print(path, "fdsh")
+
 
 try:
 
