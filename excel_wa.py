@@ -37,13 +37,13 @@ layout = [
     [sg.Text("                     ", size=(25,1), font=('Arial', 20), text_color='white')],
 
 
-    [sg.Radio('Submit form every : ', "RADIO1", default=True, size=(20,1),font=('Arial', 20)), sg.InputText(size=(10,1), font=('Arial', 20), default_text="10"), sg.Text("Minutes", font=('Arial', 20))],
+    [sg.Radio('Submit form every : ', "RADIO1", default=True, size=(20,1),font=('Arial', 20)), sg.InputText(size=(10,1), font=('Arial', 20)), sg.Text("Minutes", font=('Arial', 20))],
 
     [sg.Radio('Submit form Randomly Between every : ', "RADIO1", font=('Arial', 20)),  sg.InputText(size=(10,1), font=('Arial', 20)), sg.Text(' minutes to  : ', font=('Arial', 20) ), sg.InputText(size=(10,1), font=('Arial', 20)), sg.Text("Minutes.", font=('Arial', 20))],
 
     [sg.Text("                     ", size=(25,1), font=('Arial', 20), text_color='white')],
 
-    [sg.Text('Excel Data Filename', size=(18,1), font=("Arial", 20), text_color='black'), sg.InputText(size=(10,1), font=('Arial', 20), default_text="new.csv")],
+    [sg.Text('Excel Data Filename', size=(18,1), font=("Arial", 20), text_color='black'), sg.InputText(size=(10,1), font=('Arial', 20))],
 
     [sg.Text("                     ", size=(25,1), font=('Arial', 20), text_color='white')],
 
