@@ -2,7 +2,6 @@
 # Imports
 
 import PySimpleGUI as sg
-import csv
 import requests
 import time
 from selenium import webdriver
@@ -10,7 +9,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 import random
 from bs4 import BeautifulSoup
 import pandas as pd
-from csv import writer
 import openpyxl
 
 
@@ -61,13 +59,13 @@ window.close()
 if event == 'Cancel' or event == None:
     quit()
 
-# print('Value 0', values[0])
-# print('Value 1', values[1])
-# print('Value 2', values[2])
-# print('Value 3', values[3])
-# print('Value 4', values[4])
-# print('Value 5', values[5])
-# print('Value6', values[6])
+print('Value 0', values[0])
+print('Value 1', values[1])
+print('Value 2', values[2])
+print('Value 3', values[3])
+print('Value 4', values[4])
+print('Value 5', values[5])
+print('Value6', values[6])
 
 # ------------------------------------------------------------------------------
 # Getting ID / Xpath
@@ -161,7 +159,7 @@ try:
             if values[1] == True:  # If custom timing chosen:
 
                 print('Chosen Duration: ', int(values[2]), 'Minutes')
-                time.sleep(int(values[1] * 60)) # multiply by 60 later
+                time.sleep(int(values[2]) * 60) # multiply by 60 later
 
             else: # If Range Timing Chosen
 
