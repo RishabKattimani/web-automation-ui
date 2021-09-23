@@ -166,16 +166,16 @@ try:
 
 
 
-            # if values[1] == True:  # If custom timing chosen:
-            #
-            #     print('Chosen Duration: ', int(values[2]), 'Minutes')
-            #     time.sleep(int(values[2]) * 60) # multiply by 60 later
-            #
-            # else: # If Range Timing Chosen
-            #
-            #     random_generate = random.randint(int(values[4]), int(values[5])) # Randomly Generated Time
-            #     print('Randomly Generated Duration: ', random_generate, 'Minutes')
-            #     time.sleep(random_generate * 60)
+            if values[1] == True:  # If custom timing chosen:
+
+                print('Chosen Duration: ', int(values[2]), 'Minutes')
+                time.sleep(int(values[2]) * 60) # multiply by 60 later
+
+            else: # If Range Timing Chosen
+
+                random_generate = random.randint(int(values[4]), int(values[5])) # Randomly Generated Time
+                print('Randomly Generated Duration: ', random_generate, 'Minutes')
+                time.sleep(random_generate * 60)
 
             #
             if repeat_times <= 0:
