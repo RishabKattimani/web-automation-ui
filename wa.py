@@ -45,6 +45,10 @@ layout = [
 
     [sg.Text("                     ", size=(25,1), font=('Arial', 20), text_color='white')],
 
+    [sg.Text('Exit After ', size=(18,1), font=("Arial", 20), text_color='black'), sg.InputText(size=(10,1), font=('Arial', 20)), sg.Text('Times ', size=(18,1), font=("Arial", 20), text_color='black')],
+
+    [sg.Text("                     ", size=(25,1), font=('Arial', 20), text_color='white')],
+
     [sg.Submit(size=(19,1), font=('Arial', 20)), sg.Cancel(size=(19,1), font=('Arial', 20))],
 
 ]
@@ -66,6 +70,9 @@ if event == 'Cancel' or event == None:
 # print('Value 4', values[4])
 # print('Value 5', values[5])
 # print('Value6', values[6])
+print(values[7])
+repeat_times = int(values[7])
+
 
 # ------------------------------------------------------------------------------
 # Getting ID / Xpath
@@ -135,11 +142,14 @@ try:
             address.send_keys(sheet_obj.cell(row=j,column=4).value)
 
             button = driver.find_element_by_tag_name('button').click()
-
+            repeat_times = (repeat_times - 1)
             time.sleep(5)
 
 
             driver.quit()
+
+
+            print(j)
 
 # ------------------------------------------------------------------------------
 # Saving The Data
@@ -156,16 +166,22 @@ try:
 
 
 
-            if values[1] == True:  # If custom timing chosen:
+            # if values[1] == True:  # If custom timing chosen:
+            #
+            #     print('Chosen Duration: ', int(values[2]), 'Minutes')
+            #     time.sleep(int(values[2]) * 60) # multiply by 60 later
+            #
+            # else: # If Range Timing Chosen
+            #
+            #     random_generate = random.randint(int(values[4]), int(values[5])) # Randomly Generated Time
+            #     print('Randomly Generated Duration: ', random_generate, 'Minutes')
+            #     time.sleep(random_generate * 60)
 
-                print('Chosen Duration: ', int(values[2]), 'Minutes')
-                time.sleep(int(values[2]) * 60) # multiply by 60 later
+            #
+            if repeat_times <= 0:
+                print('stopping')
+                break
 
-            else: # If Range Timing Chosen
-
-                random_generate = random.randint(int(values[4]), int(values[5])) # Randomly Generated Time
-                print('Randomly Generated Duration: ', random_generate, 'Minutes')
-                time.sleep(random_generate * 60)
 
 # ------------------------------------------------------------------------------
 # Submitting The Data
